@@ -13,6 +13,8 @@ class ProductDetailsSerializer():
             'id': product.id,
             'name': product.name,
             'description': product.description,
+            'price': product.price,
+            'stock': product.stock,
             'slug': product.slug,
             'comments': CommentListSerializer(product.comments.all(), include_user=True).data,
             'tags': [tag.name for tag in product.tags],

@@ -40,6 +40,8 @@ class Product(db.Model):
         return {
             'id': self.id,
             'name': self.name,
+            'price': self.price,
+            'stock': self.stock,
             'slug': self.slug,
             'comments_count': self.comments.count(),
             'tags': [{'id': t.id, 'name': t.name} for t in self.tags],
